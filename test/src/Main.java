@@ -3,8 +3,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Human human = new Human("Dima",29);
-        human.sayHello();
+//        Human human = new Human("Dima",29);
+//        human.sayHello();
+
+
     }
 
     static int[] fillArray(int x) {
