@@ -13,7 +13,7 @@ public class Task1 {
         //System.out.println('A' + "12");
         //System.out.println(isPalindrome("Was it a cat I saw?"));
         //System.out.println(factorial(3));
-        //System.out.println(determineGroup(18));
+        System.out.println(determineGroup(50));
         //printOddNumbers(new int[] {-3,5,20,8,7,3,100});
         //printOddNumbers(new int[] {-4,20,8,100});
 //        System.out.println(Arrays.toString(mergeArrays(new int[]{0, 2, 2}, new int[] {1, 3})));
@@ -79,7 +79,17 @@ public class Task1 {
     }
 
     public static int determineGroup(int age) {
-        return age < 1 ? -1: age < 14 ? 1 : age < 18 ? 2 : age < 66 ? 3:-1;
+        //return age < 1 ? -1: age < 14 ? 1 : age < 18 ? 2 : age < 66 ? 3:-1;
+        if (age>=7 && age<=13) {
+            return 1;
+        } else if (age>=14 && age<=17) {
+            return 2;
+        } else if (age>=18 && age<=65) {
+            return 3;
+        } else {
+            return -1;
+        }
+
     }
 
 

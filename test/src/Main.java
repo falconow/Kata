@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -5,8 +6,24 @@ public class Main {
     public static void main(String[] args) {
 //        Human human = new Human("Dima",29);
 //        human.sayHello();
+        int[][] test = new int[][];
 
 
+
+    }
+
+    public static void binar(int a) {
+        int i, b;
+        while(a !=0 ) {
+            b = a%2;
+            System.out.print(b);
+            a = a/2;
+        }
+    }
+
+    public static void recursionFucn() {
+        System.out.println("Привет, JavaRush!");
+        recursionFucn();
     }
 
     static int[] fillArray(int x) {
