@@ -11,4 +11,12 @@ public class Dog {
         sayHello();
         cat.sayHello();
     }
+
+    public static void test (){
+      
+
+    }
+    public void test (int y) {
+
+    }
 }
