@@ -4,11 +4,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
 //        Human human = new Human("Dima",29);
 //        human.sayHello();
-        int[][] test = new int[][];
 
-
+        //String a = null;
+        Object a = new Object();
+        Integer b = (Integer) a;
 
     }
 
