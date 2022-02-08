@@ -1,5 +1,7 @@
 package Task428;
 
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
         moveRobot(new RobotConnectionManager() {
@@ -21,17 +23,34 @@ public class Main {
 
     }
     public static void moveRobot(RobotConnectionManager robotConnectionManager, int toX, int toY) {
-        int i = 0;
         RobotConnection connection = null;
-        try {
-            connection = robotConnectionManager.getConnection();
-            connection.moveRobotTo(toX, toY);
-            i = 0;
-        } catch (RobotConnectionException e) {
-
-        } finally {
-            connection.close();
+        for (int i = 0;i < 3; i++) {
+            try {
+                connection = robotConnectionManager.getConnection();
+                connection.moveRobotTo(toX, toY);
+                i = 3;
+            } catch (RobotConnectionException e) {
+                if (i == 2) {
+                    throw  new RobotConnectionException("Error connect!");
+                }
+            } finally {
+                try {
+                    connection.close();
+                } catch (Exception ignored) {}
+            }
         }
+    }
 
+    public static void moveRobot2(RobotConnectionManager robotConnectionManager, int toX, int toY) {
+        for (int i = 0;i < 3; i++) {
+            try (RobotConnection connection = robotConnectionManager.getConnection()) {
+                connection.moveRobotTo(toX, toY);
+                i = 3;
+            } catch (RobotConnectionException e) {
+                if (i == 2) {
+                    throw e;
+                }
+            }
+        }
     }
 }
