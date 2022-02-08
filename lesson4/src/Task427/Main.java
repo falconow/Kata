@@ -4,7 +4,7 @@ public class Main {
 
     static class Car implements AutoCloseable {
         @Override
-        public void close()  {
+        public void close() throws Exception {
             System.out.println("Машина закрывается...");
         }
 
@@ -18,9 +18,8 @@ public class Main {
     public static void main(String[] args) {
         try (Car car = new Car()) {
             car.drive();
-        } catch (RuntimeException e) {
-
-        }
+        } catch (RuntimeException e) {}
+        catch (Exception e) {}
 
     }
 
