@@ -16,10 +16,9 @@ public class Main {
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
         Reader reader = new InputStreamReader(inputStream, charset);
         StringBuilder stringBuilder = new StringBuilder();
-        int res = reader.read();
-        while (res >= 0) {
+        int res = 0 ;
+        while ((res = reader.read()) >= 0) {
             stringBuilder.append((char) res);
-            res = reader.read();
         }
         return stringBuilder.toString();
     }

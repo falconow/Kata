@@ -10,12 +10,11 @@ public class Main {
     }
 
     public static void print(InputStream inputStream, OutputStream outputStream) throws IOException {
-        int read = inputStream.read();
-        while (read >= 0) {
+        int read = 0;
+        while ((read = inputStream.read()) >= 0) {
             if (read % 2 == 0) {
                 outputStream.write(read);
             }
-            read = inputStream.read();
         }
         outputStream.flush();
         inputStream.close();
