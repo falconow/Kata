@@ -12,12 +12,15 @@ public class DynamicArray<T> {
     }
 
     public void add(T el) {
-        e1 = Arrays.copyOf(e1,e1.length+1);
-        e1[e1.length-1] = el;
+        e1 = Arrays.copyOf(e1, e1.length + 1);
+        e1[e1.length - 1] = el;
     }
 
     public void remove(int index) {
-        System.arraycopy();
+        Object[] test = new Object[e1.length - 1];
+        System.arraycopy(e1, 0, test, 0, index);
+        System.arraycopy(e1, index + 1, test, index, test.length - index);
+        e1 = test;
     }
 
     @Override

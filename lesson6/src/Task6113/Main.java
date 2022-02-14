@@ -10,7 +10,7 @@ public class Main {
         test.add("Masha");
         test.add("Andrey");
         System.out.println(test);
-        test.remove("Petr");
+        test.remove(2);
         System.out.println(test);
     }
 }
