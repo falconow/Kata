@@ -14,11 +14,9 @@ public class Main {
             }
             i++;
         }
-        Iterator<Integer> iterator = list.iterator();
+
         StringBuilder stringBuilder = new StringBuilder();
-        while (iterator.hasNext()) {
-            stringBuilder.append(iterator.next()).append(" ");
-        }
+        list.forEach((k) -> stringBuilder.append(k).append(" "));
         System.out.println(stringBuilder.toString().trim());
     }
 }

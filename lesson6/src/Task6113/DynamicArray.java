@@ -5,8 +5,7 @@ import java.util.Arrays;
 
 
 public class DynamicArray<T> {
-    private Object[] e1 = new Object[]{};
-
+    private T [] e1 = null;
     public T get(int index) {
         return (T) e1[index];
     }
@@ -20,7 +19,7 @@ public class DynamicArray<T> {
         Object[] test = new Object[e1.length - 1];
         System.arraycopy(e1, 0, test, 0, index);
         System.arraycopy(e1, index + 1, test, index, test.length - index);
-        e1 = test;
+        //e1 = test;
     }
 
     @Override
