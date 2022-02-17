@@ -10,7 +10,7 @@ public class DynamicArray<T> {
     public DynamicArray(){}
 
     public T get(int index) {
-        if (index >= 0 && index < values.length) {
+        if (index >= 0 && index < valuesIndex) {
             return (T) values[index];
         } else {
             throw new ArrayIndexOutOfBoundsException("Bad index " + index + "!");
