@@ -1,29 +1,37 @@
 package Task6113;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
 
-
 public class DynamicArray<T> {
-    private T [] e1 = null;
+    private T[] values = (T[]) new Object[10];
+    private int valuesIndex = 0;
+
+    public DynamicArray(){}
+
     public T get(int index) {
-        return (T) e1[index];
+        if (index >= 0 && index < values.length) {
+            return (T) values[index];
+        } else {
+            throw new ArrayIndexOutOfBoundsException("Bad index " + index + "!");
+        }
     }
 
     public void add(T el) {
-        e1 = Arrays.copyOf(e1, e1.length + 1);
-        e1[e1.length - 1] = el;
+        if (valuesIndex == values.length - 1) {
+            values = Arrays.copyOf(values, values.length*2);
+        }
+        values[valuesIndex] = el;
+        valuesIndex++;
     }
 
     public void remove(int index) {
-        Object[] test = new Object[e1.length - 1];
-        System.arraycopy(e1, 0, test, 0, index);
-        System.arraycopy(e1, index + 1, test, index, test.length - index);
-        //e1 = test;
+        System.arraycopy(values, index + 1, values, index, values.length - index - 1);
+        valuesIndex--;
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(e1);
+        return Arrays.toString(values);
     }
 }

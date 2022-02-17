@@ -9,8 +9,16 @@ public class Main {
         test.add("Petr");
         test.add("Masha");
         test.add("Andrey");
+        test.add("Vasya");
+        test.add("Anna");
+        test.add("Luda");
+        test.add("Lena");
+        test.add("Petya");
         System.out.println(test);
-        test.remove(2);
+        test.remove(5);
         System.out.println(test);
+        test.add("Nastya");
+        System.out.println(test);
+        System.out.println(test.get(19));
     }
 }
