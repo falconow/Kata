@@ -15,9 +15,11 @@ public class Main {
             Stream<? extends T> stream,
             Comparator<? super T> order,
             BiConsumer<? super T, ? super T> minMaxConsumer) {
+
         List<T> values = stream.collect(Collectors.toList());
+        values.sort(order);
         if (!values.isEmpty()) {
-            minMaxConsumer.accept(values.stream().min(order).get(), values.stream().max(order).get());
+            minMaxConsumer.accept(values.get(0), values.get(values.size()-1));
         } else {
             minMaxConsumer.accept(null, null);
         }
