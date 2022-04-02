@@ -10,8 +10,8 @@
 
     <title>Hello, world!</title>
     </head>
-    <body>
-        
+    <body>  
+      <!-- Шапка -->      
         <div class="container-fluid">            
             <div class="row bg-dark text-white align-items-center"> 
 
@@ -27,24 +27,28 @@
             </div>
         </div>
 
+        <!-- Основная область -->
         <div class="row min-vh-100">
+            <!-- Колонка навигации -->
             <div class="col-1 p-0 pt-2 pl-2" style="width: 120px;">
               <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link active" id="v-pills-admin-tab" data-toggle="pill" href="#v-pills-admin" role="tab" aria-controls="v-admin-home" aria-selected="true">Admin</a>
-                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">User</a>
-                
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">User</a>                
               </div>
-            </div>
+            </div>            
+            <!-- Колонка контента -->
             <div class="col-11 p-4 bg-light">
-              <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane w-100 fade show active h-100 d-inline-block" id="v-pills-admin" role="tabpanel" aria-labelledby="v-pills-admin-tab">
+              <!-- Панель с вкладками -->
+              <div class="tab-content" id="v-pills-tabContent">    
+                <!-- Содержимое 1 вкладки -->
+                  <div class="tab-pane w-100 fade show active h-100 d-inline-block" id="v-pills-admin" role="tabpanel" aria-labelledby="v-pills-admin-tab">
                     <h1>Admin panel</h1>
                     <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">User table</a>
-                          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">New User</a>                          
-                        </div>
-                      </nav>
+                      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">User table</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">New User</a>                          
+                      </div>
+                    </nav>
                       <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"> 
                             <div class="border bg-light">
@@ -66,40 +70,53 @@
                                 <tbody>
                                   <tr>
                                     <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
+                                    <td>admin</td>
+                                    <td>admin</td>
+                                    <td>35</td>
+                                    <td>admin@mail.ru</td>
+                                    <td>ADMIN USER</td>
+                                    <td>
+                                      <a class="btn btn-info" href="#" role="button">Edit</a>
+                                    </td>
+                                    <td>
+                                      <a class="btn btn-danger" href="#" role="button">Delete</a>
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">2</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
+                                    <th scope="row">1</th>
+                                    <td>user</td>
+                                    <td>user</td>
+                                    <td>30</td>
+                                    <td>user@mail.ru</td>
+                                    <td>USER</td>
+                                    <td>
+                                      <a class="btn btn-info" href="#" role="button">Edit</a>
+                                    </td>
+                                    <td>
+                                      <a class="btn btn-danger" href="#" role="button">Delete</a>
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">3</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
+                                    <th scope="row">1</th>
+                                    <td>admin2</td>
+                                    <td>admin2</td>
+                                    <td>25</td>
+                                    <td>admi2@mail.ru</td>
+                                    <td>ADMIN USER</td>
+                                    <td>
+                                      <a class="btn btn-info" href="#" role="button">Edit</a>
+                                    </td>
+                                    <td>
+                                      <a class="btn btn-danger" href="#" role="button">Delete</a>
+                                    </td>
                                   </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>                       
+                                            
                       </div>
                 </div>
+                <!-- Содержимое 2 вкладки -->
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">2</div>                
               </div>
             </div>

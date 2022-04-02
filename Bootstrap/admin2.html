@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    </head>
+    <body>  
+      <!-- Шапка -->      
+        <div class="container-fluid">            
+            <div class="row bg-dark text-white align-items-center"> 
+
+                <div class="col-11">
+                    <h5 class="p-2">admin@mail.ru with roles: ADMIN_USER</h5>
+                </div> 
+
+                <div class="col text-right">
+                    <a href="#" class="font-weight-bold">Logout</a>
+                </div>
+                    
+
+            </div>
+        </div>
+        <!-- Основной контент -->    
+        <div class="row min-vh-100">
+            <!-- Панель навигации -->
+            <div class="col-1">            
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">                
+                    <a class="nav-link active" id="v-pills-admin-tab" data-toggle="pill" href="#v-pills-admin" role="tab" aria-controls="v-pills-admin" aria-selected="true">Admin</a>
+                    <a class="nav-link" id="v-pills-user-tab" data-toggle="pill" href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="false">User</a>                    
+                </div>
+            </div>
+            <!-- Компоненты навигации -->
+            <div class="col-11 bg-light p-4"> 
+                <!--  -->                           
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- "Элемент навигации Admin -->                   
+                    <div class="tab-pane fade show active" id="v-pills-admin" role="tabpanel" aria-labelledby="v-pills-admin-tab">
+                        <h1>Admin panel</h1>
+                         <!-- Таблица вкладок -->
+                        <nav>                            
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                              <a class="nav-item nav-link active" id="nav-user-table-tab" data-toggle="tab" href="#nav-user-table" role="tab" aria-controls="nav-user-table" aria-selected="true">User table</a>
+                              <a class="nav-item nav-link" id="nav-new-user-tab" data-toggle="tab" href="#nav-new-user" role="tab" aria-controls="nav-new-user" aria-selected="false">New User</a>                          
+                            </div>
+                        </nav>
+                        <!-- Контент вкладок -->
+                        <div class="tab-content" id="nav-tabContent">
+                            <!-- Вкладка User Table -->
+                            <div class="tab-pane fade show active" id="nav-user-table" role="tabpanel" aria-labelledby="nav-user-table-tab">                                
+                                <!-- Заголовок -->
+                                <div class="border bg-light">
+                                    <h5 class="p-3">All users</h5>
+                                </div>  
+                                <!-- Таблица с users -->                                                                    
+                                <div class="p-4 bg-white">
+                                    <table class="table table-hover bg-white">                                                   
+                                        <thead>                                    
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">First Name</th>
+                                                <th scope="col">Last NAme</th>
+                                                <th scope="col">Age</th>
+                                                <th scope="col">Email</th>
+                                                <th scope="col">Role</th>
+                                                <th scope="col">Edit</th>
+                                                <th scope="col">Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>admin</td>
+                                                <td>admin</td>
+                                                <td>35</td>
+                                                <td>admin@mail.ru</td>
+                                                <td>ADMIN USER</td>
+                                                <td>
+                                                    <a class="btn btn-info" href="#" role="button">Edit</a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger" href="#" role="button">Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>user</td>
+                                                <td>user</td>
+                                                <td>30</td>
+                                                <td>user@mail.ru</td>
+                                                <td>USER</td>
+                                                <td>
+                                                    <a class="btn btn-info" href="#" role="button">Edit</a>
+                                                </td>
+                                                <td>
+                                                <a class="btn btn-danger" href="#" role="button">Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>admin2</td>
+                                                <td>admin2</td>
+                                                <td>25</td>
+                                                <td>admi2@mail.ru</td>
+                                                <td>ADMIN USER</td>
+                                                <td>
+                                                    <a class="btn btn-info" href="#" role="button">Edit</a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger" href="#" role="button">Delete</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>    
+                                </div>
+                            </div>
+                            <!-- Вкладка New User -->
+                            <div class="tab-pane fade" id="nav-new-user" role="tabpanel" aria-labelledby="nav-new-user-tab">
+                                <!-- Заголовок -->
+                                <div class="border bg-light">
+                                    <h5 class="p-3">Add new users</h5>
+                                </div>  
+                                <!-- Форма ввода нового пользователя -->
+                                <div class="bg-white d-flex justify-content-center col-10">
+                                    <form>
+                                        <div>
+                                          <label for="exampleFormControlInput1">Email address</label>
+                                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="exampleFormControlSelect2">Example multiple select</label>
+                                          <select multiple class="form-control" id="exampleFormControlSelect2">
+                                            <option>ROLE_ADMIN</option>
+                                            <option>ROLE_USER</option>                                        
+                                          </select>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="exampleFormControlTextarea1">Example textarea</label>
+                                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>                            
+                        </div>
+
+
+                    </div>                    
+                    <!-- Элемент навигации User -->
+                    <div class="tab-pane fade" id="v-pills-user" role="tabpanel" aria-labelledby="v-pills-user-tab">
+                        User
+                    </div>               
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        
+        
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
