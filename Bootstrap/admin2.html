@@ -126,29 +126,40 @@
                                     <h5 class="p-3">Add new users</h5>
                                 </div>  
                                 <!-- Форма ввода нового пользователя -->
-                                <div class="bg-white d-flex justify-content-center col-10">
-                                    <form>
-                                        <div>
-                                          <label for="exampleFormControlInput1">Email address</label>
-                                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                <div class="bg-white d-flex justify-content-center text-center">
+                                    <form class="col-3 p-2">
+                                        <div class="form-group">
+                                            <label class="font-weight-bold " for="FirstName">First Name</label>
+                                            <input type="text" class="form-control" id="FirstName">
                                         </div>
                                         <div class="form-group">
-                                          <label for="exampleFormControlSelect2">Example multiple select</label>
-                                          <select multiple class="form-control" id="exampleFormControlSelect2">
-                                            <option>ROLE_ADMIN</option>
-                                            <option>ROLE_USER</option>                                        
-                                          </select>
+                                            <label class="font-weight-bold" for="LastName">Last Name</label>
+                                            <input type="text" class="form-control" id="LastName">
                                         </div>
                                         <div class="form-group">
-                                          <label for="exampleFormControlTextarea1">Example textarea</label>
-                                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            <label class="font-weight-bold" for="Age">Age</label>
+                                            <input type="text" class="form-control" id="Age">
                                         </div>
+                                        <div class="form-group">
+                                            <label class="font-weight-bold" for="Email">Email</label>
+                                            <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="font-weight-bold" for="Password">Password</label>
+                                            <input type="password" class="form-control" id="Password" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="font-weight-bold" for="Role">Role</label>
+                                            <select multiple class="form-control" id="Role">
+                                                <option>ROLE_ADMIN</option>
+                                                <option>ROLE_USER</option>                                        
+                                            </select>
+                                        </div> 
+                                        <button type="submit" class="btn btn-success p-2">Add new user</button>                                       
                                     </form>
                                 </div>
                             </div>                            
                         </div>
-
-
                     </div>                    
                     <!-- Элемент навигации User -->
                     <div class="tab-pane fade" id="v-pills-user" role="tabpanel" aria-labelledby="v-pills-user-tab">
